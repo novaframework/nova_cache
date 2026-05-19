@@ -1,0 +1,11 @@
+{application, nova_cache, [
+    {description, "General-purpose KV cache library for the Nova ecosystem"},
+    {vsn, "git"},
+    {registered, [nova_cache_sup, nova_cache_registry]},
+    {applications, [kernel, stdlib]},
+    {mod, {nova_cache_app, []}},
+    {env, [{caches, #{}}]},
+    {modules, []},
+    {licenses, ["Apache-2.0"]},
+    {links, [{"GitHub", "https://github.com/novaframework/nova_cache"}]}
+]}.
