@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'guides/**'
+      - 'docs/**'
+      - 'LICENSE'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'guides/**'
+      - 'docs/**'
+      - 'LICENSE'
+
+jobs:
+  ci:
+    uses: Taure/erlang-ci/.github/workflows/ci.yml@v2
+    permissions:
+      contents: write
+      pull-requests: write
+    with:
+      enable-audit: true
+      enable-sbom: true
+      enable-sbom-scan: true
+      enable-dep-submission: true
+      enable-summary: true
+    secrets: inherit
