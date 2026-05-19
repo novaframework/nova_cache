@@ -23,9 +23,12 @@ jobs:
       contents: write
       pull-requests: write
     with:
+      enable-ct: true
+      enable-hank: true
       enable-audit: true
       enable-sbom: true
       enable-sbom-scan: true
-      enable-dep-submission: true
+      enable-dependency-submission: true
+      enable-mutate: true
       enable-summary: true
     secrets: inherit
