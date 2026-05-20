@@ -31,6 +31,5 @@ Add `opentelemetry_api` to your project's `rebar.config`. `nova_cache`
 detects the module at runtime and starts emitting events. No configuration on
 `nova_cache` itself is required.
 
-The OpenTelemetry-aware sibling library `opentelemetry_nova_cache` (planned
-for v0.2) will install the trace/metric pipeline; until then, configure it in
-your application's own OpenTelemetry setup.
+Configure the trace/metric pipeline in your application's own
+OpenTelemetry setup.
